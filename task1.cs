@@ -1,4 +1,8 @@
 using System;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 public class Program
 {
@@ -6,23 +10,26 @@ public class Program
 	{
 		Console.Write("Введите количество элементов первого массива:\t");
 		int elementsCount1 = Convert.ToInt32(Console.ReadLine());
-		int[] a1 = new int[elementsCount1];
-		Console.Write("Введите количество элементов второго массива:\t");
+
+        Console.Write("Введите количество элементов второго массива:\t");
 		int elementsCount2 = Convert.ToInt32(Console.ReadLine());
+
+        int[] a1 = new int[elementsCount1];
+		
 		int[] a2 = new int[elementsCount2];
-		int s=0;
+		
+        int s = 0;
 		Console.Write("Введите значения первого массива:\t");
+
 		for (int i = 0; i < elementsCount1; i++)
            {
                a1[i]=Convert.ToInt32(Console.ReadLine());
            }
+
 		Console.Write("Введите значения второго массива:\t");
+
 		for (int j = 0; j < elementsCount1; j++)
            {
-<<<<<<< Updated upstream
-               a1[j]=Convert.ToInt32(Console.ReadLine());
-           }
-=======
                a2[j]=Convert.ToInt32(Console.ReadLine());
            }
         
@@ -47,6 +54,5 @@ public class Program
            }
 
 
->>>>>>> Stashed changes
 	}
 }
