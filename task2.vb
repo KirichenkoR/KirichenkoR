@@ -11,30 +11,34 @@ Dim ii As Integer
    Dim isp As Integer
    Dim Year As Integer
    Dim Month As Integer
-   Dim dt As Variant
-   Dim dpp As Variant
-   Dim poisk As String
    
 n = 1
-i = 0 'ñ÷åò÷èê ñòóäåíòîâ
+m = 1
+i = 4 'ñ÷åò÷èê ñòóäåíòîâ
 a = 0 'ñ÷åò÷èê îöåíîê ïðåäìåòà
 k = 0 'ñ÷åò÷èê ïðåäìåòîâ
 
+While IsEmpty(Cells(1, i)) = False
+          Cells(2 + m, 15).Value = Cells(1, i).Value
+          m = m + 1
+          i = i + 2
+Wend
+
+
+i = 0
 For i = 4 To 12 Step 2
-    If IsEmpty(Cells(i, 1)) = False Then
-       k = k + 1
-    End If
+
 Next
 
 i = 0
-While IsEmpty(Cells(«B» & n + 1)) = False
+While IsEmpty(Cells(n + 1, 2)) = False
           i = i + 1
           n = n + 1
 Wend
 
 n = 0
   For n = 1 To i
-    If IsEmpty(Cells(«D» & n + 2)) = False Then
+    If IsEmpty(Cells(n + 2, 3)) = False Then
        a = a + 1
        n = n + 1
     End If
@@ -44,3 +48,4 @@ n = 0
 End Sub
 
   
+
