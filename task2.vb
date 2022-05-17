@@ -16,27 +16,31 @@ Dim ii As Integer
    Dim poisk As String
    
 n = 1
-i = 0 'счетчик студентов
-a = 0 'счетчик оценок предмета
-k = 0 'счетчик предметов
+i = 0 'ñ÷åò÷èê ñòóäåíòîâ
+a = 0 'ñ÷åò÷èê îöåíîê ïðåäìåòà
+k = 0 'ñ÷åò÷èê ïðåäìåòîâ
 
 For i = 4 To 12 Step 2
     If IsEmpty(Cells(i, 1)) = False Then
        k = k + 1
-     Exit Sub
+    End If
 Next
 
-
 i = 0
-While IsEmpty(Range(«B» & n + 1)) = False
+While IsEmpty(Cells(«B» & n + 1)) = False
           i = i + 1
           n = n + 1
 Wend
+
 n = 0
   For n = 1 To i
-    If IsEmpty(Range(«D» & n + 2)) = False Then
+    If IsEmpty(Cells(«D» & n + 2)) = False Then
        a = a + 1
        n = n + 1
-     Exit Sub
+    End If
   Next
+
+
+End Sub
+
   
