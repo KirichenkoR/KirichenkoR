@@ -39,11 +39,6 @@ public class Program
 
         Array.Resize(ref a1, elementsCount1+a-1);
 
-		for (int i = 0; i < a1.Length; i++)
-           {
-		      Console.WriteLine(a1[i]);
-           }
-		
         int k = 0;
         for (int i = a-1; i < a1.Length; i++)
            {
