@@ -1,4 +1,8 @@
 using System;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 public class Program
 {
@@ -26,23 +30,28 @@ public class Program
 
 		for (int j = 0; j < elementsCount1; j++)
            {
-               a1[j]=Convert.ToInt32(Console.ReadLine());
+               a2[j]=Convert.ToInt32(Console.ReadLine());
            }
         
         int a = 0;
         Console.Write("Введите позицию начала замены:\t");
         a=Convert.ToInt32(Console.ReadLine());
 
-        Array.Resize(ref a1, elementsCount1+a);
+        Array.Resize(ref a1, elementsCount1+a-1);
 
-        for (int i = a; i < a1.Length; i++)
+		for (int i = 0; i < a1.Length; i++)
            {
-               int j = 0;
-               a1[i] = a2[j];
-               j++;
+		      Console.WriteLine(a1[i]);
+           }
+		
+        int k = 0;
+        for (int i = a-1; i < a1.Length; i++)
+           {
+               a1[i] = a2[k];
+               k++;
            }
 
-        Console.Write("Значения первого массива:\t");
+        Console.Write("Значения первого массива после слияния:\t");
 
         for (int i = 0; i < a1.Length; i++)
            {
