@@ -18,34 +18,61 @@ i = 4 'ñ÷åò÷èê ñòóäåíòîâ
 a = 0 'ñ÷åò÷èê îöåíîê ïðåäìåòà
 k = 0 'ñ÷åò÷èê ïðåäìåòîâ
 
+Range("O3:P7").ClearContents
+
 While IsEmpty(Cells(1, i)) = False
           Cells(2 + m, 15).Value = Cells(1, i).Value
           m = m + 1
           i = i + 2
 Wend
 
-
 i = 0
-For i = 4 To 12 Step 2
-
-Next
-
-i = 0
-While IsEmpty(Cells(n + 1, 2)) = False
+While IsEmpty(Cells(n + 2, 2)) = False
           i = i + 1
           n = n + 1
 Wend
 
-n = 0
   For n = 1 To i
-    If IsEmpty(Cells(n + 2, 3)) = False Then
+    If IsEmpty(Cells(n + 2, 4)) = False Then
        a = a + 1
-       n = n + 1
     End If
   Next
 
+  Cells(3, 16).Value = a
+  a = 0
 
-End Sub
-
+  For n = 1 To i
+    If IsEmpty(Cells(n + 2, 6)) = False Then
+       a = a + 1
+    End If
+  Next
   
+  Cells(4, 16).Value = a
+  a = 0
 
+  For n = 1 To i
+    If IsEmpty(Cells(n + 2, 8)) = False Then
+       a = a + 1
+    End If
+  Next
+  
+  Cells(5, 16).Value = a
+  a = 0
+
+  For n = 1 To i
+    If IsEmpty(Cells(n + 2, 10)) = False Then
+       a = a + 1
+    End If
+  Next
+  
+  Cells(6, 16).Value = a
+  a = 0
+
+  For n = 1 To i
+    If IsEmpty(Cells(n + 2, 12)) = False Then
+       a = a + 1
+    End If
+  Next
+  Cells(7, 16).Value = a
+  
+End Sub
